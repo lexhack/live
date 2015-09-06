@@ -8,58 +8,63 @@ html, body {
 	width: 100%;
 }
 
-#sched, #right {
+.large-window h1{
+	font-weight: 900;
+	border-bottom: 3px solid #ffc747;
+	width: calc(100% - 30px);
+	margin: 0;
+	margin-top: 30px;
+}
+
+#schedule, #right {
 	float: left;
-/*	border: 2px solid black;*/
+}
+
+#schedule {
+	height: 100%;
+	padding-left: 30px;
+	width: calc(25% - 4px - 30px);
+}
+
+#schedule .content {
+	height: calc(100% - 150px);
+}
+
+#announcements .content {
+	height: calc(100% - 90px);
+}
+
+#right {
+	height: calc(100% - 190px);
+	padding-left: 60px;
+	width: calc(75% - 4px - 60px);
+}
+
+.content h2{
+	margin-top: 40px;
+	font-size: 20px;
+}
+
+.content p{
+	margin-top: -10px;
+	font-size: 15px;
 }
 
 .content {
 	overflow: scroll;
 }
 
-#right .content {
-	height: calc(100% - 90px);
-}
-
-#sched {
-	height: 100%;
-	padding-left: 30px;
-	width: calc(35% - 4px - 30px);
-}
-
-#sched .content {
-	height: calc(100% - 150px);
-}
-
-#sched h2, #right h2{
-	margin-top: 40px;
-	font-size: 20px;
-}
-
-#sched p, #right p{
-	margin-top: -10px;
-	font-size: 15px;
-}
-
-#right {
-	height: calc(100% - 190px);
-	position: relative;
-	padding-left: 60px;
-	width: calc(65% - 4px - 60px);
-}
-
-
 #hotline {
 	position: fixed;
 	bottom: 0px;
 	height: 200px;
-	width: calc(65% - 4px - 60px - 2px);
+	width: calc(75% - 4px - 60px - 2px);
 }
 
-#hotline input {
+#inputs input {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #F7F7F7;
-	width: 120px;
+	width: 80px;
 	margin-right: 20px;
 	padding-left: 5px;
 	border: 2px solid #4B4F52;
@@ -70,9 +75,13 @@ html, body {
 	outline: none;
 }
 
+#inputs input:nth-child(2){
+	width: calc(100% - 550px);
+}
+
 #hotline p{
 	margin-top: 25px;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: 900;
 }
 
@@ -83,11 +92,11 @@ html, body {
 
 #hotline button{
 	float: right;
-	margin-right: 30px;
-	margin-top: -60px;
+	margin-right: 230px;
+	margin-top: -100px;
 	cursor: pointer;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
+	font-size: 17px;
 	font-weight: 900;
 	color: #4B4F52;
 	outline: none;
@@ -100,11 +109,19 @@ html, body {
 	color: #ffc747;
 }
 
+#hotline p span {
+	color: green;
+}
 
-.large-window h1{
-	font-weight: 900;
-	border-bottom: 3px solid #ffc747;
-	width: calc(100% - 30px);
-	margin: 0;
-	margin-top: 30px;
+#hotline a span{
+	color: #ffc747;
+	text-decoration: underline;
+}
+
+#hotline a{
+	font-size: 15px;
+	display: block;
+	float: right;
+	width: 200px;
+	margin-top: -100px;
 }
