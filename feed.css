@@ -1,0 +1,110 @@
+html, body {
+	font-family: 'Montserrat', sans-serif;
+	color: #4B4F52;
+	background-color: #F7F7F7;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#sched, #right {
+	float: left;
+/*	border: 2px solid black;*/
+}
+
+.content {
+	overflow: scroll;
+}
+
+#right .content {
+	height: calc(100% - 90px);
+}
+
+#sched {
+	height: 100%;
+	padding-left: 30px;
+	width: calc(35% - 4px - 30px);
+}
+
+#sched .content {
+	height: calc(100% - 150px);
+}
+
+#sched h2, #right h2{
+	margin-top: 40px;
+	font-size: 20px;
+}
+
+#sched p, #right p{
+	margin-top: -10px;
+	font-size: 15px;
+}
+
+#right {
+	height: calc(100% - 190px);
+	position: relative;
+	padding-left: 60px;
+	width: calc(65% - 4px - 60px);
+}
+
+
+#hotline {
+	position: fixed;
+	bottom: 0px;
+	height: 200px;
+	width: calc(65% - 4px - 60px - 2px);
+}
+
+#hotline input {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #F7F7F7;
+	width: 120px;
+	margin-right: 20px;
+	padding-left: 5px;
+	border: 2px solid #4B4F52;
+	border-right: none;
+	border-top: none;
+	color: #4B4F52;
+	font-size: 15px;
+	outline: none;
+}
+
+#hotline p{
+	margin-top: 25px;
+	font-size: 15px;
+	font-weight: 900;
+}
+
+#hotline h1 {
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+#hotline button{
+	float: right;
+	margin-right: 30px;
+	margin-top: -60px;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	font-weight: 900;
+	color: #4B4F52;
+	outline: none;
+	background-color: #F7F7F7;
+	border: 3px solid #4B4F52;
+}
+
+#hotline button:hover{
+	background-color: #4B4F52;
+	color: #ffc747;
+}
+
+
+.large-window h1{
+	font-weight: 900;
+	border-bottom: 3px solid #ffc747;
+	width: calc(100% - 30px);
+	margin: 0;
+	margin-top: 30px;
+}
