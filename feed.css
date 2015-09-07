@@ -26,6 +26,10 @@ html, body {
 	width: calc(25% - 4px - 30px);
 }
 
+#schedule h1 {
+	width: 100%;
+}
+
 #schedule .content {
 	height: calc(100% - 150px);
 }
@@ -46,8 +50,9 @@ html, body {
 }
 
 .content p{
+	font-family: "Source Sans Pro", sans-serif;
 	margin-top: -10px;
-	font-size: 15px;
+	font-size: 16px;
 }
 
 .content {
@@ -71,7 +76,7 @@ html, body {
 	border-right: none;
 	border-top: none;
 	color: #4B4F52;
-	font-size: 15px;
+	font-size: 16px;
 	outline: none;
 }
 
@@ -120,7 +125,8 @@ html, body {
 }
 
 #hotline a{
-	font-size: 14px;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
 	display: block;
 	float: right;
 	width: 250px;
