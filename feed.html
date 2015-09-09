@@ -1,75 +1,47 @@
 <DOCTYPE html>
-<html>
+<html ng-app="lh-live">
 	<head>
 		<link type = "text/css" rel = "stylesheet" href = "feed.css" />
         	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,600,400' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+    <script>
+      var app = angular.module("lh-live", ["firebase"]);
+      app.controller("lh-live-sched",function($scope,$firebaseObject){
+        var FB = new Firebase("https://lh-live-announce.firebaseio.com/sched");
+        $firebaseObject(FB).$bindTo($scope,"sched");
+      });
+      app.controller("lh-live-announce",function($scope,$firebaseObject){
+        var FB = new Firebase("https://lh-live-announce.firebaseio.com/announce");
+        $firebaseObject(FB).$bindTo($scope,"announce");
+      });
+    </script>
 	</head>
 	<body>
-		<div id = "schedule" class = "large-window">
+		<div ng-controller="lh-live-sched" id = "schedule" class = "large-window">
 			<h1> Schedule </h1>
 
 			<div class = "content">
-				<h2>Registration / mingle time</h2>
-				<p>8:00 am - 9:00 am</p>	
-				
-				<h2>Opening ceremonies</h2>
-				<p>9:00 am - 9:15 am</p>
-
-				<h2>Hacking (with breaks for food)</h2>
-				<p>9:15 am - 9:15 pm</p>
-
-				<h2>1st round judging + deliberation</h2>
-				<p>9:15 pm - 10:00 pm</p>
-				
-				<h2>Demos / 2nd round judging + closing ceremonies</h2>
-				<p>10:00 pm - 11:00 pm</p>
-
-				<h2>1st round judging + deliberation</h2>
-				<p>9:15 pm - 10:00 pm</p>
-				
-				<h2>Demos / 2nd round judging + closing ceremonies</h2>
-				<p>10:00 pm - 11:00 pm</p>
-
-				<h2>1st round judging + deliberation</h2>
-				<p>9:15 pm - 10:00 pm</p>
-				
-				<h2>Demos / 2nd round judging + closing ceremonies</h2>
-				<p>10:00 pm - 11:00 pm</p>
+        <div ng-repeat="item in sched">
+          <h2>{{item.name}}</h2>
+          <p>{{item.time}}</p>
+        </div>
 			</div>
 		</div>
-		<div id = "right">
+		<div ng-controller="lh-live-announce" id = "right">
 			<div id = "announcements" class = "large-window">
 				<h1> Announcements </h1>
 
 				<div class = "content">
-					<h2> Sample Announcement </h2>
-					<p> This is a sample announcement. This is a sample announcement. This is a sample announcement. This is a sample announcement. </p>
-
-					<h2> Sample Announcement </h2>
-					<p> This is a sample announcement. This is a sample announcement. This is a sample announcement. This is a sample announcement. </p>
-
-					<h2> Sample Announcement </h2>
-					<p> This is a sample announcement. This is a sample announcement. This is a sample announcement. This is a sample announcement. </p>
-
-					<h2> Sample Announcement </h2>
-					<p> This is a sample announcement. This is a sample announcement. This is a sample announcement. This is a sample announcement. </p>
-
-					<h2> Sample Announcement </h2>
-					<p> This is a sample announcement. This is a sample announcement. This is a sample announcement. This is a sample announcement. </p>
-
-					<h2> Sample Announcement </h2>
-					<p> This is a sample announcement. This is a sample announcement. This is a sample announcement. This is a sample announcement. </p>
-
-					<h2> Sample Announcement </h2>
-					<p> This is a sample announcement. This is a sample announcement. This is a sample announcement. This is a sample announcement. </p>
-
-					<h2> Sample Announcement </h2>
-					<p> This is a sample announcement. This is a sample announcement. This is a sample announcement. This is a sample announcement. </p>
-
-					<h2> Sample Announcement </h2>
-					<p> This is a sample announcement. This is a sample announcement. This is a sample announcement. This is a sample announcement. </p>
-
+          <div ng-show="announce[0] === undefined">
+            <h2>No announcements.</h2>
+          </div>
+          <div ng-repeat="item in announce">
+            <h2>{{item.name}}</h2>
+            <p>{{item.text}}</p>
+          </div>
 				</div>
 			</div>
 			<div id = "hotline" class = "large-window">

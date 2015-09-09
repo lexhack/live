@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Registration / mingle time",
+    "time": "8:00 am - 9:00 am"
+  },
+  {
+    "name": "Opening ceremonies",
+    "time": "9:00 am - 9:15 am"
+  },
+  {
+    "name": "Hacking (with breaks for food)",
+    "time": "9:15 am - 9:15 pm"
+  },
+  {
+    "name": "1st round judging + deliberation",
+    "time": "9:15 pm - 10:00 pm"
+  },
+  {
+    "name": "Demos / 2nd round judging + closing ceremonies",
+    "time": "10:00 pm - 11:00 pm"
+  },
+  {
+    "name": "1st round judging + deliberation",
+    "time": "9:15 pm - 10:00 pm"
+  },
+  {
+    "name": "Demos / 2nd round judging + closing ceremonies",
+    "time": "10:00 pm - 11:00 pm"
+  },
+  {
+    "name": "1st round judging + deliberation",
+    "time": "9:15 pm - 10:00 pm"
+  },
+  {
+    "name": "Demos / 2nd round judging + closing ceremonies",
+    "time": "10:00 pm - 11:00 pm"
+  }
+]
