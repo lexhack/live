@@ -66,7 +66,7 @@ html, body {
 	width: calc(75% - 4px - 60px - 2px);
 }
 
-#inputs input {
+#inputs input, select {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #F7F7F7;
 	width: 80px;
@@ -78,6 +78,10 @@ html, body {
 	color: #4B4F52;
 	font-size: 16px;
 	outline: none;
+}
+
+#inputs select {
+	width:auto;
 }
 
 #inputs input:nth-child(2){
