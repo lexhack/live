@@ -1,0 +1,142 @@
+html, body {
+	font-family: 'Montserrat', sans-serif;
+	color: #4B4F52;
+	background-color: #F7F7F7;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.large-window h1{
+	font-weight: 900;
+	border-bottom: 3px solid #ffc747;
+	width: calc(100% - 30px);
+	margin: 0;
+	margin-top: 30px;
+}
+
+#schedule, #right {
+	float: left;
+}
+
+#schedule {
+	height: 100%;
+	padding-left: 30px;
+	width: calc(25% - 4px - 30px);
+}
+
+#schedule h1 {
+	width: 100%;
+}
+
+#schedule .content {
+	height: calc(100% - 150px);
+}
+
+#announcements .content {
+	height: calc(100% - 90px);
+}
+
+#right {
+	height: calc(100% - 190px);
+	padding-left: 60px;
+	width: calc(75% - 4px - 60px);
+}
+
+.content h2{
+	margin-top: 40px;
+	font-size: 20px;
+}
+
+.content p{
+	font-family: "Source Sans Pro", sans-serif;
+	margin-top: -10px;
+	font-size: 16px;
+}
+
+.content {
+	overflow: scroll;
+}
+
+#hotline {
+	position: fixed;
+	bottom: 0px;
+	height: 200px;
+	width: calc(75% - 4px - 60px - 2px);
+}
+
+#inputs input, select {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #F7F7F7;
+	width: 80px;
+	margin-right: 20px;
+	padding-left: 5px;
+	border: 2px solid #4B4F52;
+	border-right: none;
+	border-top: none;
+	color: #4B4F52;
+	font-size: 16px;
+	outline: none;
+}
+
+#inputs select {
+	width:auto;
+}
+
+#inputs input:nth-child(2){
+	width: calc(100% - 350px);
+}
+
+#hotline p{
+	margin-top: 25px;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+#hotline h1 {
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+#hotline button{
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+	font-weight: 900;
+	color: #4B4F52;
+	outline: none;
+	background-color: #F7F7F7;
+	border: 3px solid #4B4F52;
+
+	position: absolute;
+	top: 60px;
+	right: 30px;
+}
+
+#hotline button:hover{
+	background-color: #4B4F52;
+	color: #ffc747;
+}
+
+#hotline p span {
+	color: green;
+}
+
+#hotline a span{
+	color: #ffc747;
+	text-decoration: underline;
+}
+
+#hotline a{
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
+	display: block;
+	float: right;
+	width: 250px;
+	text-align: right;
+
+	position: absolute;
+	top: 120px;
+	right: 30px;
+}
