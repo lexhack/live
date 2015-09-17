@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	$("#summon-mentor").on("click", function() {
 		$.ajax({
-			url:"http://52.2.119.17:3000/request",
+			url:"http://api.lexhack.org:3000/request",
 			type: "POST",
 			dataType: "json",
 			data: {
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 var updateAnnouncements = function() {
 	$.ajax({
-		url: "http://52.2.119.17:3000/announcements",
+		url: "http://api.lexhack.org:3000/announcements",
 		type:"GET",
 		dataType: "json",
 		success: function(json) {
@@ -65,7 +65,7 @@ var replaceURLWithHTMLLinks = function(text) {
 
 var updateSkills = function() {
 	$.ajax({
-		url: "http://52.2.119.17:3000/available",
+		url: "http://api.lexhack.org:3000/available",
 		type: "GET",
 	    dataType : "json",
 	    success: function(json) {
