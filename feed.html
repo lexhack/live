@@ -36,15 +36,15 @@
 				<div id="announcements-list" class = "content">
 				</div>
 			</div>
-			<div id = "hotline" class = "large-window">
+			<div id = "hotline" class = "large-window content">
 				<h1> Help Hotline </h1>
-				<div id = "inputs">
-					Room # <input id="room-input" type = text placeholder = "Room #"/>
-					<select id="skill-select" type = text placeholder = "Help for"></select>
-				</div>
-				<p> Status: <span>Matched to a mentor.</span></p>
-				<a>Want help getting started? Try the <span>LexHack Start Guide.</span></a>
-				<button id="summon-mentor">Summon a mentor</button>
+					<div id = "inputs">
+						Room # <input id="room-input" type = text placeholder = "Room #"/>
+						<select id="skill-select" type = text placeholder = "Help for"></select>
+					</div>
+					<p> Status: <ul id="mentors-requested"></ul></p>
+					<a id="guide-link">Want help getting started? Try the <span>LexHack Start Guide.</span></a>
+					<button id="summon-mentor">Summon a mentor</button>
 			</div>
 		</div>
 	</body>
