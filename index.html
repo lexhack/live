@@ -25,26 +25,22 @@ document.body.className="hasJS";
 			{<span>live</span>}
 		</a>
 	</h2>
-<!-- 	<table id="clock" class="slider">
+ 	<table id="clock" class="slider">
 		<tr>
-			<td><span class="d"></span><small>d</small></td>
 			<td><span class="h"></span><small>h</small></td>
 			<td><span class="m"></span><small>m</small></td>
 			<td><span class="s"></span><small>s</small></td>
 		</tr>
 	</table>
-	<table id="clock2" class="slider">
+	<table id="clock2" class="slider" style="font-size:12em;">
 		<tr>
-			<td><span class="d"></span><small>d</small></td>
 			<td><span class="h"></span><small>h</small></td>
-		</tr>
-		<tr>
 			<td><span class="m"></span><small>m</small></td>
 			<td><span class="s"></span><small>s</small></td>
 		</tr>
 	</table>
- -->	<div id="caption" class="slider">
- 		LexHack has begun!
+ 	<div id="caption" class="slider">
+ 		<span id="cap-text">LexHack is about to begin!</span>
 <!-- 		<span style="color:#444">opening ceremony</span> <span style="color:#eee"><span>Sept. 19, 2015, 9AM</span> <span>@ LHS Auditorium</span></span>
  -->	</div>
 	
@@ -67,7 +63,10 @@ $(function(){
 	//TIMER
 	function updateTime(){
 		var result = "";
-		var totalSec = (Date.parse("Sep 19 2015 9:00:00 AM") - Date.now())/1000;
+		var totalSec = (Date.parse("Sep 19 2015 9:15:00 PM") - Date.now())/1000;
+		if(totalSec < 0) {totalSec = 0;$("#cap-text").text("LexHack is over!");}
+		if(totalSec > 12*60*60) {totalSec = 12*60*60;$("#cap-text").text("LexHack is about to begin!");}
+		else {$("#cap-text").text("LexHack has begun!");}
 		var days = parseInt( totalSec / 86400 );
 		var hours = parseInt( totalSec / 3600 ) % 24;
 		var minutes = parseInt( totalSec / 60 ) % 60;
