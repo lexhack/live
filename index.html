@@ -65,7 +65,7 @@ $(function(){
 		var result = "";
 		var totalSec = (Date.parse("Sep 19 2015 9:15:00 PM") - Date.now())/1000;
 		if(totalSec < 0) {totalSec = 0;$("#cap-text").html("LexHack is over! Check out <a href='http://lexhack-2k15.devpost.com/submissions'>DevPost</a> for all the awesome submissions.");}
-		if(totalSec > 12*60*60) {totalSec = 12*60*60;$("#cap-text").text("LexHack is about to begin!");}
+		else if(totalSec > 12*60*60) {totalSec = 12*60*60;$("#cap-text").text("LexHack is about to begin!");}
 		else {$("#cap-text").text("LexHack has begun!");}
 		var days = parseInt( totalSec / 86400 );
 		var hours = parseInt( totalSec / 3600 ) % 24;
