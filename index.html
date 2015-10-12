@@ -27,20 +27,20 @@ document.body.className="hasJS";
 	</h2>
  	<table id="clock" class="slider">
 		<tr>
-			<td><span class="h"></span><small>h</small></td>
-			<td><span class="m"></span><small>m</small></td>
-			<td><span class="s"></span><small>s</small></td>
+			<td><span class="h">00</span><small>h</small></td>
+			<td><span class="m">00</span><small>m</small></td>
+			<td><span class="s">00</span><small>s</small></td>
 		</tr>
 	</table>
 	<table id="clock2" class="slider" style="font-size:12em;">
 		<tr>
-			<td><span class="h"></span><small>h</small></td>
-			<td><span class="m"></span><small>m</small></td>
-			<td><span class="s"></span><small>s</small></td>
+			<td><span class="h">00</span><small>h</small></td>
+			<td><span class="m">00</span><small>m</small></td>
+			<td><span class="s">00</span><small>s</small></td>
 		</tr>
 	</table>
  	<div id="caption" class="slider">
- 		<span id="cap-text">LexHack is over! Check out <a href='http://lexhack-2k15.devpost.com/submissions'>DevPost</a> for all the awesome submissions.</span>
+ 		<span id="cap-text"><span style="display:inline-block;">LexHack is over!</span> <span style="display:inline-block;">Check out <a href='http://lexhack-2k15.devpost.com/submissions'>DevPost</a> for all the awesome submissions.</span></span>
 <!-- 		<span style="color:#444">opening ceremony</span> <span style="color:#eee"><span>Sept. 19, 2015, 9AM</span> <span>@ LHS Auditorium</span></span>
  -->	</div>
 	
@@ -78,8 +78,8 @@ $(function(){
 		$(".m").html(minutes < 10 ? "0" + minutes : minutes);
 		$(".s").html(seconds < 10 ? "0" + seconds : seconds);
 	}
-	updateTime();
-	setInterval(updateTime,1000);
+	//updateTime();
+	//setInterval(updateTime,1000);
 	
 	
 	sequencer.slidein("#clock,#clock2",500,function(){ //Basically when all the stuff has loaded. Pretty arbitrary. Looks nice fading in with clock, though.
